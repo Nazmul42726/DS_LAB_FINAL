@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+//**Alert: you have to call the merge_sort function like:
+//         merge_sort(array_name, first_index, last_index)
+//**Remember:when we are sorting the whole array:
+//        first_index=0 and last_index=arrays_size-1
+
 void merge(int arr[], int left, int mid, int right){
     int size1=mid-left+1;
     int size2=right-mid;
