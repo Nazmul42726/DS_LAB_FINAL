@@ -50,12 +50,12 @@ public:
     }
 };
 
-int main(){
-    Queue q;
-    q.enqueue(3);
-    q.enqueue(5);
-    q.enqueue(7);
-    cout<<q.front()<<endl;
-    q.dequeue();
-    cout<<q.front()<<endl;
-}
+// int main(){
+//     Queue q;
+//     q.enqueue(3);
+//     q.enqueue(5);
+//     q.enqueue(7);
+//     cout<<q.front()<<endl;
+//     q.dequeue();
+//     cout<<q.front()<<endl;
+// }
