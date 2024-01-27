@@ -12,9 +12,9 @@ struct Node{
 };
 
 Node* search(Node** head, int value){
-    if(head==nullptr){
+    if(*head==nullptr){
         cout<<"Error: List is empty!"<<endl;
-        return;
+        return nullptr;
     }
     Node* current= *head;
     while(current->data!=value && current!=nullptr){
@@ -28,9 +28,9 @@ Node* search(Node** head, int value){
 }
 
 int countOccurrences(Node** head, int value){
-    if(head==nullptr){
+    if(*head==nullptr){
         cout<<"Error: List is empty!"<<endl;
-        return;
+        return 0;
     }
     Node* current= *head;
     int count=0;

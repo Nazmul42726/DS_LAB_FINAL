@@ -11,20 +11,20 @@ struct Node{
     }
 };
 
-void InsertAfterGivenNode(Node* givenNode, int data){
-    if(givenNode==nullptr){
+void InsertAfterGivenNode(Node** givenNode, int data){
+    if(*givenNode==nullptr){
         cout<<"INVALID ADDRESS"<<endl;
         return;
     }
 
     Node* nodeToInsert=new Node(data);
 
-    nodeToInsert->next=givenNode->next;
-    givenNode->next=nodeToInsert;
+    nodeToInsert->next=(*givenNode)->next;
+    (*givenNode)->next=nodeToInsert;
 }
 
 void InsertAfterGivenData(Node** head, int data, int dataOfPreviousNode){
-    if(head==nullptr){
+    if(*head==nullptr){
         cout<<"Error: Node is Empty!"<<endl;
         return;
     }

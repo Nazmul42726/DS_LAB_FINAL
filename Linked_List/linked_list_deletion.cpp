@@ -12,7 +12,7 @@ struct Node{
 };
 
 void deleteAtPosition(Node** head, int position){
-    if(head==nullptr){
+    if(*head==nullptr){
         cout<<"Error: List is empty!"<<endl;
         return;
     }
@@ -37,7 +37,7 @@ void deleteAtPosition(Node** head, int position){
 }
 
 void deleteNodeWithValue(Node** head, int value){
-    if(head==nullptr){
+    if(*head==nullptr){
         cout<<"Error: List is empty!"<<endl;
         return;
     }

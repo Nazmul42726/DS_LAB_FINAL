@@ -18,6 +18,10 @@ void insertAtHead(Node** head, int data){
 }
 void insertAtTail(Node** head, int data){
     Node* nodeToInsert = new Node(data);
+    if(*head==nullptr){
+        *head=nodeToInsert;
+        return;
+    }
     Node* current=*head;
     while(current->next!=nullptr){
         current=current->next;
