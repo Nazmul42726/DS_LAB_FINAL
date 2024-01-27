@@ -16,6 +16,7 @@ A big shoutout to the following individuals who have played a pivotal role in th
 3. **Saida Sultana**
 4. **Sanzid Islam Mahi**
 5. **Sayeed Mahdi**
+6. **Pritom Shekhar Shil**
 6. **ChatGPT: King contributor**
 
 Let's continue learning and growing together! Happy coding! 🌟
