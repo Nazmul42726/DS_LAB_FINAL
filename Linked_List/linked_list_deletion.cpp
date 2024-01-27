@@ -41,15 +41,20 @@ void deleteNodeWithValue(Node** head, int value){
         cout<<"Error: List is empty!"<<endl;
         return;
     }
-    
-    Node* current=*head;
-    while(current->next->data!=value && current->next!=nullptr)
-        current=current->next;
-
-    if(current->next==nullptr){
-        cout<<"Given \"Value\" doesn't match with any data in the list"<<endl;
+    if((*head)->data==value){
+        *head=(*head)->next;
         return;
     }
-    Node* nodeToDelete=current->next;
-    current->next=nodeToDelete->next;
+
+    Node* current=*head;
+
+    while(current->next->data!=value && current->next->next!=nullptr)
+        current=current->next;
+
+    if(current->next->data==value){
+        Node* nodeToDelete=current->next;
+        current->next=nodeToDelete->next;
+        return;
+    }
+    cout<<"Given \"Value\" doesn't match with any data in the list"<<endl;
 }

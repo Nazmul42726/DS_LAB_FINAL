@@ -29,16 +29,15 @@ void InsertAfterGivenData(Node** head, int data, int dataOfPreviousNode){
         return;
     }
     Node* current=*head;
-    while(current->data!=dataOfPreviousNode && current!=nullptr){
+    while(current->data!=dataOfPreviousNode && current->next!=nullptr){
         current=current->next;
     }
-    if(current==nullptr){
-        cout<<"Given Data doesn't belongs to the list"<<endl;
+    if(current->data==dataOfPreviousNode){
+        Node* nodeToInsert=new Node(data);
+        
+        nodeToInsert->next=current->next;
+        current->next=nodeToInsert;
         return;
     }
-
-    Node* nodeToInsert=new Node(data);
-    
-    nodeToInsert->next=current->next;
-    current->next=nodeToInsert;
+    cout<<"Given Data doesn't belongs to the list"<<endl;
 }

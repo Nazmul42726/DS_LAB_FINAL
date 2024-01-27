@@ -11,20 +11,20 @@ struct Node{
     }
 };
 
-Node* search(Node** head, int value){
+bool search(Node** head, int value){
     if(*head==nullptr){
         cout<<"Error: List is empty!"<<endl;
-        return nullptr;
+        return false;
     }
     Node* current= *head;
-    while(current->data!=value && current!=nullptr){
+    while(current->data!=value && current->next!=nullptr){
         current=current->next;
     }
-    if(current==nullptr){
-        cout<<"Given data in not available in the list!"<<endl;
-        return;
-    }
-    return current;
+    if(current->data==value)
+        return true;
+    
+    cout<<"Given data in not available in the list!"<<endl;
+    return false;
 }
 
 int countOccurrences(Node** head, int value){
