@@ -17,7 +17,7 @@ Node* search(Node** head, int value){
         return;
     }
     Node* current= *head;
-    while(current->data!=value && current->next!=nullptr){
+    while(current->data!=value && current!=nullptr){
         current=current->next;
     }
     if(current==nullptr){
